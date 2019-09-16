@@ -263,7 +263,7 @@ namespace UnityImageLoader {
             if (data != null && data.Length > 0) {
                 RectTransform tranform = (RectTransform)image.transform;
 
-                Texture2D texture = Convert2Texture((int)tranform.sizeDelta.x, (int)tranform.sizeDelta.y, data);
+                Texture2D texture = Convert2Texture((int)tranform.rect.width, (int)tranform.rect.height, data);
 
                 return Display(image, texture);
             }
